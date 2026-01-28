@@ -1,0 +1,4 @@
+<view class="container">
+  <view>结算页（Mock 下单）</view>
+  <t-button bind:tap="createOrder">提交订单</t-button>
+</view>
