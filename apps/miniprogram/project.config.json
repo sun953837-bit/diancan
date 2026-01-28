@@ -1,0 +1,9 @@
+{
+  "miniprogramRoot": "./",
+  "projectname": "diancan-miniprogram",
+  "description": "进口美妆商城小程序",
+  "appid": "touristappid",
+  "setting": {
+    "urlCheck": false
+  }
+}

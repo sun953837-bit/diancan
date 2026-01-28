@@ -1,0 +1,5 @@
+<view class="container">
+  <view>订单号：{{order.order_no}}</view>
+  <view>状态：{{order.order_status}}</view>
+  <t-button bind:tap="mockPay">支付（Mock）</t-button>
+</view>
