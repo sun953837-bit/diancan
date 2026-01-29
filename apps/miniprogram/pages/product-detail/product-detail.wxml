@@ -1,0 +1,7 @@
+<view class="container">
+  <image class="cover" src="{{product.cover}}" mode="aspectFill" />
+  <view class="title">{{product.name}}</view>
+  <view class="desc">{{product.description}}</view>
+  <view class="price">¥{{selectedSku.price}}</view>
+  <t-button bind:tap="addToCart">加入购物车</t-button>
+</view>

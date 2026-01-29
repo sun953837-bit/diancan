@@ -1,0 +1,12 @@
+[Unit]
+Description=Diancan PHP API (php-fpm)
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/var/www/diancan/services/api-php
+ExecStart=/usr/sbin/php-fpm8.2 -F
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

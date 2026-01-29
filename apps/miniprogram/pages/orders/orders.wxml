@@ -1,0 +1,6 @@
+<view class="container">
+  <view wx:for="{{orders}}" wx:key="order_no">
+    <view>{{item.order_no}} - {{item.order_status}}</view>
+    <t-button size="small" bind:tap="goDetail" data-order="{{item.order_no}}">查看</t-button>
+  </view>
+</view>

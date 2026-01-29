@@ -1,0 +1,4 @@
+<view class="container">
+  <view>授权登录</view>
+  <t-button bind:tap="doLogin">微信登录</t-button>
+</view>

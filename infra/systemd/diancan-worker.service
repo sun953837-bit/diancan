@@ -1,0 +1,12 @@
+[Unit]
+Description=Diancan Worker (FastAPI)
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/var/www/diancan/services/worker-py
+ExecStart=/usr/bin/python3 -m uvicorn app.main:app --host 0.0.0.0 --port 8001
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

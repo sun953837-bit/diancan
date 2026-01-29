@@ -1,0 +1,6 @@
+<view class="container">
+  <t-card wx:for="{{products}}" wx:key="id" title="{{item.name}}" description="¥{{item.price}}">
+    <image class="cover" src="{{item.cover}}" mode="aspectFill" />
+    <t-button size="small" bind:tap="goDetail" data-id="{{item.id}}">查看详情</t-button>
+  </t-card>
+</view>

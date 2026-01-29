@@ -1,0 +1,4 @@
+<view class="container">
+  <view>个人中心</view>
+  <t-button bind:tap="goLogin">登录</t-button>
+</view>

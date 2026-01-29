@@ -1,0 +1,117 @@
+openapi: 3.0.3
+info:
+  title: Diancan Mall API
+  version: 0.1.0
+servers:
+  - url: http://localhost:8080
+paths:
+  /api/v1/auth/wx-login:
+    post:
+      summary: 小程序登录
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                code:
+                  type: string
+      responses:
+        "200":
+          description: ok
+  /api/v1/products:
+    get:
+      summary: 商品列表
+      responses:
+        "200":
+          description: ok
+  /api/v1/products/{id}:
+    get:
+      summary: 商品详情
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: ok
+  /api/v1/orders:
+    post:
+      summary: 创建订单
+      responses:
+        "200":
+          description: ok
+    get:
+      summary: 订单列表
+      responses:
+        "200":
+          description: ok
+  /api/v1/orders/{order_no}:
+    get:
+      summary: 订单详情
+      parameters:
+        - in: path
+          name: order_no
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: ok
+  /api/v1/pay/wechat/prepay:
+    post:
+      summary: 微信支付下单
+      responses:
+        "200":
+          description: ok
+  /api/v1/pay/wechat/notify:
+    post:
+      summary: 微信支付回调
+      responses:
+        "200":
+          description: ok
+  /api/v1/fulfillment/self/assign:
+    post:
+      summary: 自配送派单
+      responses:
+        "200":
+          description: ok
+  /api/v1/fulfillment/courier/ship:
+    post:
+      summary: 快递发货
+      responses:
+        "200":
+          description: ok
+  /api/v1/fulfillment/courier/track:
+    get:
+      summary: 查询物流轨迹
+      responses:
+        "200":
+          description: ok
+  /api/v1/reviews:
+    post:
+      summary: 创建评价
+      responses:
+        "200":
+          description: ok
+  /api/v1/admin/login:
+    post:
+      summary: 管理员登录
+      responses:
+        "200":
+          description: ok
+  /api/v1/bi/orders:
+    get:
+      summary: BI 订单导出
+      responses:
+        "200":
+          description: ok
+  /api/v1/bi/events:
+    get:
+      summary: BI 事件导出
+      responses:
+        "200":
+          description: ok

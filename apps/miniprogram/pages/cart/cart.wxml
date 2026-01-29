@@ -1,0 +1,4 @@
+<view class="container">
+  <view>购物车骨架</view>
+  <t-button bind:tap="goCheckout">去结算</t-button>
+</view>
